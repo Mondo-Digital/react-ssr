@@ -27,6 +27,7 @@ export interface Config {
   distDir: string;
   viewsDir: string;
   staticViews: string[];
+  usePreCompiled: Boolean;
   webpack?: (defaultConfig: webpack.Configuration, env: 'development' | 'production') => webpack.Configuration;
 }
 
@@ -35,6 +36,7 @@ const getSsrConfig = (): Config => {
     id: 'default',
     distDir: '.ssr',
     viewsDir: 'views',
+    usePreCompiled: false,
     staticViews: [],
   };
   const ssrConfigPath = path.join(cwd, 'ssr.config.js');

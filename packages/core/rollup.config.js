@@ -44,6 +44,7 @@ const fileConfig = (src, dist) => ({
 
 export default [
   dirConfig('src/register.ts'),
+  dirConfig('src/preCompileViews.ts'),
   fileConfig('src/components/Document/index.tsx', `${distDir}/document.js`),
   fileConfig('src/components/Document/context.ts', `${distDir}/document-context.js`),
   fileConfig('src/components/Head/index.tsx', `${distDir}/head.js`),
