@@ -1,1 +1,1 @@
-"use strict";var e=require("./register-394922e2.js");require("path"),require("fs-extra"),require("react"),require("slash"),require("lz-string"),require("urlsafe-base64"),require("fs"),require("recursive-readdir"),module.exports=e.register;
+"use strict";var r=require("./register-d5338d0c.js");require("path"),require("fs-extra"),require("react"),require("slash"),require("lz-string"),require("urlsafe-base64"),require("fs"),require("recursive-readdir"),module.exports=r.register;

@@ -1,7 +1,7 @@
 'use strict';
 
-var helpers = require('./helpers-89ed3c40.js');
-var register = require('./register-394922e2.js');
+var helpers = require('./helpers-7a10276b.js');
+var register = require('./register-d5338d0c.js');
 var fs = require('fs');
 var fse = require('fs-extra');
 var MemoryFileSystem = require('memory-fs');
@@ -32,8 +32,8 @@ var cwd = process.cwd();
 
 var ufs = require('unionfs').ufs;
 
-var memfs = new MemoryFileSystem__default['default']();
-ufs.use(fs__default['default']).use(memfs);
+var memfs = new MemoryFileSystem__default["default"]();
+ufs.use(fs__default["default"]).use(memfs);
 var development = /*#__PURE__*/(function () {
   var _ref = register._asyncToGenerator( /*#__PURE__*/register.regenerator.mark(function _callee(app) {
     var _yield$getEntry, _yield$getEntry2, entry, entryPages, webpackConfig, compiler, devServerPort;
@@ -42,7 +42,7 @@ var development = /*#__PURE__*/(function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            fse__default['default'].removeSync(path__default['default'].join(cwd, register.ssrConfig.distDir));
+            fse__default["default"].removeSync(path__default["default"].join(cwd, register.ssrConfig.distDir));
             _context.next = 3;
             return helpers.getEntry(memfs);
 
@@ -52,12 +52,12 @@ var development = /*#__PURE__*/(function () {
             entry = _yield$getEntry2[0];
             entryPages = _yield$getEntry2[1];
             webpackConfig = helpers.configureWebpack(entry);
-            compiler = webpack__default['default'](webpackConfig);
+            compiler = webpack__default["default"](webpackConfig);
             compiler.inputFileSystem = ufs;
             devServerPort = 8888;
             _context.next = 13;
-            return new helpers.promise(function (resolve, reject) {
-              var devServer = new WebpackDevServer__default['default'](compiler, {
+            return new helpers._Promise(function (resolve, reject) {
+              var devServer = new WebpackDevServer__default["default"](compiler, {
                 hotOnly: true,
                 noInfo: true,
                 stats: 'errors-only',
@@ -71,7 +71,7 @@ var development = /*#__PURE__*/(function () {
                     var page = entryPages[i];
                     var pageId = register.getPageId(page, '_');
                     app.get("/_react-ssr/".concat(pageId, ".css"), function (req, res) {
-                      var filename = path__default['default'].join(cwd, register.ssrConfig.distDir, "".concat(pageId, ".css"));
+                      var filename = path__default["default"].join(cwd, register.ssrConfig.distDir, "".concat(pageId, ".css"));
                       var style = memfs.existsSync(filename) ? memfs.readFileSync(filename).toString() : '';
                       res.writeHead(200, {
                         'Content-Type': 'text/css'
@@ -79,7 +79,7 @@ var development = /*#__PURE__*/(function () {
                       res.end(style, 'utf-8');
                     });
                     app.get("/_react-ssr/".concat(pageId, ".js"), function (req, res) {
-                      var filename = path__default['default'].join(cwd, register.ssrConfig.distDir, "".concat(pageId, ".js"));
+                      var filename = path__default["default"].join(cwd, register.ssrConfig.distDir, "".concat(pageId, ".js"));
                       var script = memfs.readFileSync(filename).toString();
                       res.status(200).type('.js').send(script);
                     });
@@ -119,4 +119,4 @@ var development = /*#__PURE__*/(function () {
   };
 })();
 
-exports.default = development;
+exports["default"] = development;

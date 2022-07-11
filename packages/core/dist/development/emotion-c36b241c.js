@@ -1,8 +1,8 @@
 'use strict';
 
-var register = require('./register-394922e2.js');
+var register = require('./register-d5338d0c.js');
 var React = require('react');
-var helpers = require('./helpers-978f10a8.js');
+var helpers = require('./helpers-84224b5e.js');
 var cheerio = require('cheerio');
 require('path');
 require('fs-extra');
@@ -37,17 +37,17 @@ var _createEmotionServer = createEmotionServer(cache),
 var emotion = (function (app, pageId, props) {
   var _context, _context2, _context3, _context4, _context5, _context6, _context7, _context8, _context9, _context10, _context11;
 
-  var _extractCritical = extractCritical(helpers.server.renderToString( /*#__PURE__*/React__default['default'].createElement(CacheProvider, {
+  var _extractCritical = extractCritical(helpers.ReactDOMServer.renderToString( /*#__PURE__*/React__default["default"].createElement(CacheProvider, {
     value: cache
   }, app))),
       html = _extractCritical.html,
       css = _extractCritical.css,
       ids = _extractCritical.ids;
 
-  var $ = cheerio__default['default'].load(html);
+  var $ = cheerio__default["default"].load(html);
   var scriptTags = $.html($('body script'));
   var bodyWithoutScriptTags = ($('body').html() || '').replace(scriptTags, '');
   return register.concat(_context = register.concat(_context2 = register.concat(_context3 = register.concat(_context4 = register.concat(_context5 = register.concat(_context6 = register.concat(_context7 = register.concat(_context8 = register.concat(_context9 = register.concat(_context10 = register.concat(_context11 = "<!DOCTYPE html><html".concat(helpers.convertAttrToString($('html').attr()), "><head>")).call(_context11, helpers.getHeadHtml(Head.rewind()), "<link rel=\"preload\" href=\"/_react-ssr/")).call(_context10, pageId, ".js\" as=\"script\"><link rel=\"preload\" href=\"/_react-ssr/")).call(_context9, pageId, ".css\" as=\"style\"><link rel=\"stylesheet\" href=\"/_react-ssr/")).call(_context8, pageId, ".css\"><style data-emotion-css=\"")).call(_context7, ids.join(' '), "\">")).call(_context6, css, "</style></head><body")).call(_context5, helpers.convertAttrToString($('body').attr()), "><div id=\"react-ssr-root\">")).call(_context4, bodyWithoutScriptTags, "</div><script id=\"react-ssr-script\" src=\"/_react-ssr/")).call(_context3, pageId, ".js\" data-props=\"")).call(_context2, props, "\" defer></script>")).call(_context, scriptTags, "</body></html>");
 });
 
-exports.default = emotion;
+exports["default"] = emotion;

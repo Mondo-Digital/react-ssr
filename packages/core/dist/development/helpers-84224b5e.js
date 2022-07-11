@@ -1,6 +1,6 @@
 'use strict';
 
-var register = require('./register-394922e2.js');
+var register = require('./register-d5338d0c.js');
 var React = require('react');
 var stream = require('stream');
 
@@ -102,7 +102,7 @@ function r(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="
 var u="function"===typeof Symbol&&Symbol.for,ba=u?Symbol.for("react.portal"):60106,v=u?Symbol.for("react.fragment"):60107,ca=u?Symbol.for("react.strict_mode"):60108,da=u?Symbol.for("react.profiler"):60114,w=u?Symbol.for("react.provider"):60109,ea=u?Symbol.for("react.context"):60110,fa=u?Symbol.for("react.concurrent_mode"):60111,ha=u?Symbol.for("react.forward_ref"):60112,B=u?Symbol.for("react.suspense"):60113,ia=u?Symbol.for("react.suspense_list"):60120,ja=u?Symbol.for("react.memo"):60115,ka=u?Symbol.for("react.lazy"):
 60116,la=u?Symbol.for("react.block"):60121,ma=u?Symbol.for("react.fundamental"):60117,na=u?Symbol.for("react.scope"):60119;function oa(a){if(-1===a._status){a._status=0;var b=a._ctor;b=b();a._result=b;b.then(function(c){0===a._status&&(c=c.default,a._status=1,a._result=c);},function(c){0===a._status&&(a._status=2,a._result=c);});}}
 function C(a){if(null==a)return null;if("function"===typeof a)return a.displayName||a.name||null;if("string"===typeof a)return a;switch(a){case v:return "Fragment";case ba:return "Portal";case da:return "Profiler";case ca:return "StrictMode";case B:return "Suspense";case ia:return "SuspenseList"}if("object"===typeof a)switch(a.$$typeof){case ea:return "Context.Consumer";case w:return "Context.Provider";case ha:var b=a.render;b=b.displayName||b.name||"";return a.displayName||(""!==b?"ForwardRef("+b+")":"ForwardRef");
-case ja:return C(a.type);case la:return C(a.render);case ka:if(a=1===a._status?a._result:null)return C(a)}return null}var D=React__default['default'].__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;D.hasOwnProperty("ReactCurrentDispatcher")||(D.ReactCurrentDispatcher={current:null});D.hasOwnProperty("ReactCurrentBatchConfig")||(D.ReactCurrentBatchConfig={suspense:null});var pa={};function E(a,b){for(var c=a._threadCount|0;c<=b;c++)a[c]=a._currentValue2,a._threadCount=c+1;}
+case ja:return C(a.type);case la:return C(a.render);case ka:if(a=1===a._status?a._result:null)return C(a)}return null}var D=React__default["default"].__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;D.hasOwnProperty("ReactCurrentDispatcher")||(D.ReactCurrentDispatcher={current:null});D.hasOwnProperty("ReactCurrentBatchConfig")||(D.ReactCurrentBatchConfig={suspense:null});var pa={};function E(a,b){for(var c=a._threadCount|0;c<=b;c++)a[c]=a._currentValue2,a._threadCount=c+1;}
 function qa(a,b,c,d){if(d&&(d=a.contextType,"object"===typeof d&&null!==d))return E(d,c),d[c];if(a=a.contextTypes){c={};for(var f in a)c[f]=b[f];b=c;}else b=pa;return b}for(var F=new Uint16Array(16),H=0;15>H;H++)F[H]=H+1;F[15]=0;
 var ra=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,sa=Object.prototype.hasOwnProperty,ta={},ua={};
 function va(a){if(sa.call(ua,a))return !0;if(sa.call(ta,a))return !1;if(ra.test(a))return ua[a]=!0;ta[a]=!0;return !1}function wa(a,b,c,d){if(null!==c&&0===c.type)return !1;switch(typeof b){case "function":case "symbol":return !0;case "boolean":if(d)return !1;if(null!==c)return !c.acceptsBooleans;a=a.toLowerCase().slice(0,5);return "data-"!==a&&"aria-"!==a;default:return !1}}
@@ -123,26 +123,26 @@ a):b},useState:function(a){return Ga(Fa,a)},useLayoutEffect:function(){},useCall
 function La(a){switch(a){case "svg":return "http://www.w3.org/2000/svg";case "math":return "http://www.w3.org/1998/Math/MathML";default:return "http://www.w3.org/1999/xhtml"}}
 var Ma={area:!0,base:!0,br:!0,col:!0,embed:!0,hr:!0,img:!0,input:!0,keygen:!0,link:!0,meta:!0,param:!0,source:!0,track:!0,wbr:!0},Na=objectAssign({menuitem:!0},Ma),Y={animationIterationCount:!0,borderImageOutset:!0,borderImageSlice:!0,borderImageWidth:!0,boxFlex:!0,boxFlexGroup:!0,boxOrdinalGroup:!0,columnCount:!0,columns:!0,flex:!0,flexGrow:!0,flexPositive:!0,flexShrink:!0,flexNegative:!0,flexOrder:!0,gridArea:!0,gridRow:!0,gridRowEnd:!0,gridRowSpan:!0,gridRowStart:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnSpan:!0,
 gridColumnStart:!0,fontWeight:!0,lineClamp:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,tabSize:!0,widows:!0,zIndex:!0,zoom:!0,fillOpacity:!0,floodOpacity:!0,stopOpacity:!0,strokeDasharray:!0,strokeDashoffset:!0,strokeMiterlimit:!0,strokeOpacity:!0,strokeWidth:!0},Oa=["Webkit","ms","Moz","O"];Object.keys(Y).forEach(function(a){Oa.forEach(function(b){b=b+a.charAt(0).toUpperCase()+a.substring(1);Y[b]=Y[a];});});
-var Pa=/([A-Z])/g,Qa=/^ms-/,Z=React__default['default'].Children.toArray,Ra=D.ReactCurrentDispatcher,Sa={listing:!0,pre:!0,textarea:!0},Ta=/^[a-zA-Z][a-zA-Z:_\.\-\d]*$/,Ua={},Va={};function Wa(a){if(void 0===a||null===a)return a;var b="";React__default['default'].Children.forEach(a,function(a){null!=a&&(b+=a);});return b}var Xa=Object.prototype.hasOwnProperty,Ya={children:null,dangerouslySetInnerHTML:null,suppressContentEditableWarning:null,suppressHydrationWarning:null};function Za(a,b){if(void 0===a)throw Error(r(152,C(b)||"Component"));}
+var Pa=/([A-Z])/g,Qa=/^ms-/,Z=React__default["default"].Children.toArray,Ra=D.ReactCurrentDispatcher,Sa={listing:!0,pre:!0,textarea:!0},Ta=/^[a-zA-Z][a-zA-Z:_\.\-\d]*$/,Ua={},Va={};function Wa(a){if(void 0===a||null===a)return a;var b="";React__default["default"].Children.forEach(a,function(a){null!=a&&(b+=a);});return b}var Xa=Object.prototype.hasOwnProperty,Ya={children:null,dangerouslySetInnerHTML:null,suppressContentEditableWarning:null,suppressHydrationWarning:null};function Za(a,b){if(void 0===a)throw Error(r(152,C(b)||"Component"));}
 function $a(a,b,c){function d(d,h){var e=h.prototype&&h.prototype.isReactComponent,f=qa(h,b,c,e),p=[],g=!1,l={isMounted:function(){return !1},enqueueForceUpdate:function(){if(null===p)return null},enqueueReplaceState:function(a,c){g=!0;p=[c];},enqueueSetState:function(a,c){if(null===p)return null;p.push(c);}};if(e){if(e=new h(d.props,f,l),"function"===typeof h.getDerivedStateFromProps){var x=h.getDerivedStateFromProps.call(null,d.props,e.state);null!=x&&(e.state=objectAssign({},e.state,x));}}else if(O={},e=h(d.props,
 f,l),e=Ea(h,d.props,e,f),null==e||null==e.render){a=e;Za(a,h);return}e.props=d.props;e.context=f;e.updater=l;l=e.state;void 0===l&&(e.state=l=null);if("function"===typeof e.UNSAFE_componentWillMount||"function"===typeof e.componentWillMount)if("function"===typeof e.componentWillMount&&"function"!==typeof h.getDerivedStateFromProps&&e.componentWillMount(),"function"===typeof e.UNSAFE_componentWillMount&&"function"!==typeof h.getDerivedStateFromProps&&e.UNSAFE_componentWillMount(),p.length){l=p;var t=
-g;p=null;g=!1;if(t&&1===l.length)e.state=l[0];else {x=t?l[0]:e.state;var y=!0;for(t=t?1:0;t<l.length;t++){var q=l[t];q="function"===typeof q?q.call(e,x,d.props,f):q;null!=q&&(y?(y=!1,x=objectAssign({},x,q)):objectAssign(x,q));}e.state=x;}}else p=null;a=e.render();Za(a,h);if("function"===typeof e.getChildContext&&(d=h.childContextTypes,"object"===typeof d)){var A=e.getChildContext();for(var T in A)if(!(T in d))throw Error(r(108,C(h)||"Unknown",T));}A&&(b=objectAssign({},b,A));}for(;React__default['default'].isValidElement(a);){var f=a,h=f.type;if("function"!==
+g;p=null;g=!1;if(t&&1===l.length)e.state=l[0];else {x=t?l[0]:e.state;var y=!0;for(t=t?1:0;t<l.length;t++){var q=l[t];q="function"===typeof q?q.call(e,x,d.props,f):q;null!=q&&(y?(y=!1,x=objectAssign({},x,q)):objectAssign(x,q));}e.state=x;}}else p=null;a=e.render();Za(a,h);if("function"===typeof e.getChildContext&&(d=h.childContextTypes,"object"===typeof d)){var A=e.getChildContext();for(var T in A)if(!(T in d))throw Error(r(108,C(h)||"Unknown",T));}A&&(b=objectAssign({},b,A));}for(;React__default["default"].isValidElement(a);){var f=a,h=f.type;if("function"!==
 typeof h)break;d(f,h);}return {child:a,context:b}}
-var ab=function(){function a(a,b){React__default['default'].isValidElement(a)?a.type!==v?a=[a]:(a=a.props.children,a=React__default['default'].isValidElement(a)?[a]:Z(a)):a=Z(a);a={type:null,domNamespace:Ka.html,children:a,childIndex:0,context:pa,footer:""};var c=F[0];if(0===c){var d=F;c=d.length;var p=2*c;if(!(65536>=p))throw Error(r(304));var g=new Uint16Array(p);g.set(d);F=g;F[0]=c+1;for(d=c;d<p-1;d++)F[d]=d+1;F[p-1]=0;}else F[0]=F[c];this.threadID=c;this.stack=[a];this.exhausted=!1;this.currentSelectValue=null;this.previousWasTextNode=!1;this.makeStaticMarkup=
+var ab=function(){function a(a,b){React__default["default"].isValidElement(a)?a.type!==v?a=[a]:(a=a.props.children,a=React__default["default"].isValidElement(a)?[a]:Z(a)):a=Z(a);a={type:null,domNamespace:Ka.html,children:a,childIndex:0,context:pa,footer:""};var c=F[0];if(0===c){var d=F;c=d.length;var p=2*c;if(!(65536>=p))throw Error(r(304));var g=new Uint16Array(p);g.set(d);F=g;F[0]=c+1;for(d=c;d<p-1;d++)F[d]=d+1;F[p-1]=0;}else F[0]=F[c];this.threadID=c;this.stack=[a];this.exhausted=!1;this.currentSelectValue=null;this.previousWasTextNode=!1;this.makeStaticMarkup=
 b;this.suspenseDepth=0;this.contextIndex=-1;this.contextStack=[];this.contextValueStack=[];}var b=a.prototype;b.destroy=function(){if(!this.exhausted){this.exhausted=!0;this.clearProviders();var a=this.threadID;F[a]=F[0];F[0]=a;}};b.pushProvider=function(a){var b=++this.contextIndex,c=a.type._context,h=this.threadID;E(c,h);var p=c[h];this.contextStack[b]=c;this.contextValueStack[b]=p;c[h]=a.props.value;};b.popProvider=function(){var a=this.contextIndex,b=this.contextStack[a],f=this.contextValueStack[a];
 this.contextStack[a]=null;this.contextValueStack[a]=null;this.contextIndex--;b[this.threadID]=f;};b.clearProviders=function(){for(var a=this.contextIndex;0<=a;a--)this.contextStack[a][this.threadID]=this.contextValueStack[a];};b.read=function(a){if(this.exhausted)return null;var b=X;X=this.threadID;var c=Ra.current;Ra.current=Ja;try{for(var h=[""],p=!1;h[0].length<a;){if(0===this.stack.length){this.exhausted=!0;var g=this.threadID;F[g]=F[0];F[0]=g;break}var e=this.stack[this.stack.length-1];if(p||e.childIndex>=
 e.children.length){var I=e.footer;""!==I&&(this.previousWasTextNode=!1);this.stack.pop();if("select"===e.type)this.currentSelectValue=null;else if(null!=e.type&&null!=e.type.type&&e.type.type.$$typeof===w)this.popProvider(e.type);else if(e.type===B){this.suspenseDepth--;var G=h.pop();if(p){p=!1;var n=e.fallbackFrame;if(!n)throw Error(r(303));this.stack.push(n);h[this.suspenseDepth]+="\x3c!--$!--\x3e";continue}else h[this.suspenseDepth]+=G;}h[this.suspenseDepth]+=I;}else {var l=e.children[e.childIndex++],
 x="";try{x+=this.render(l,e.context,e.domNamespace);}catch(t){if(null!=t&&"function"===typeof t.then)throw Error(r(294));throw t;}finally{}h.length<=this.suspenseDepth&&h.push("");h[this.suspenseDepth]+=x;}}return h[0]}finally{Ra.current=c,X=b;}};b.render=function(a,b,f){if("string"===typeof a||"number"===typeof a){f=""+a;if(""===f)return "";if(this.makeStaticMarkup)return N(f);if(this.previousWasTextNode)return "\x3c!-- --\x3e"+N(f);this.previousWasTextNode=!0;return N(f)}b=$a(a,b,this.threadID);a=b.child;
-b=b.context;if(null===a||!1===a)return "";if(!React__default['default'].isValidElement(a)){if(null!=a&&null!=a.$$typeof){f=a.$$typeof;if(f===ba)throw Error(r(257));throw Error(r(258,f.toString()));}a=Z(a);this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""});return ""}var c=a.type;if("string"===typeof c)return this.renderDOM(a,b,f);switch(c){case ca:case fa:case da:case ia:case v:return a=Z(a.props.children),this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""}),
-"";case B:throw Error(r(294));}if("object"===typeof c&&null!==c)switch(c.$$typeof){case ha:O={};var d=c.render(a.props,a.ref);d=Ea(c.render,a.props,d,a.ref);d=Z(d);this.stack.push({type:null,domNamespace:f,children:d,childIndex:0,context:b,footer:""});return "";case ja:return a=[React__default['default'].createElement(c.type,objectAssign({ref:a.ref},a.props))],this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""}),"";case w:return c=Z(a.props.children),f={type:a,domNamespace:f,children:c,childIndex:0,
-context:b,footer:""},this.pushProvider(a),this.stack.push(f),"";case ea:c=a.type;d=a.props;var g=this.threadID;E(c,g);c=Z(d.children(c[g]));this.stack.push({type:a,domNamespace:f,children:c,childIndex:0,context:b,footer:""});return "";case ma:throw Error(r(338));case ka:switch(c=a.type,oa(c),c._status){case 1:return a=[React__default['default'].createElement(c._result,objectAssign({ref:a.ref},a.props))],this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""}),"";case 2:throw c._result;default:throw Error(r(295));
+b=b.context;if(null===a||!1===a)return "";if(!React__default["default"].isValidElement(a)){if(null!=a&&null!=a.$$typeof){f=a.$$typeof;if(f===ba)throw Error(r(257));throw Error(r(258,f.toString()));}a=Z(a);this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""});return ""}var c=a.type;if("string"===typeof c)return this.renderDOM(a,b,f);switch(c){case ca:case fa:case da:case ia:case v:return a=Z(a.props.children),this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""}),
+"";case B:throw Error(r(294));}if("object"===typeof c&&null!==c)switch(c.$$typeof){case ha:O={};var d=c.render(a.props,a.ref);d=Ea(c.render,a.props,d,a.ref);d=Z(d);this.stack.push({type:null,domNamespace:f,children:d,childIndex:0,context:b,footer:""});return "";case ja:return a=[React__default["default"].createElement(c.type,objectAssign({ref:a.ref},a.props))],this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""}),"";case w:return c=Z(a.props.children),f={type:a,domNamespace:f,children:c,childIndex:0,
+context:b,footer:""},this.pushProvider(a),this.stack.push(f),"";case ea:c=a.type;d=a.props;var g=this.threadID;E(c,g);c=Z(d.children(c[g]));this.stack.push({type:a,domNamespace:f,children:c,childIndex:0,context:b,footer:""});return "";case ma:throw Error(r(338));case ka:switch(c=a.type,oa(c),c._status){case 1:return a=[React__default["default"].createElement(c._result,objectAssign({ref:a.ref},a.props))],this.stack.push({type:null,domNamespace:f,children:a,childIndex:0,context:b,footer:""}),"";case 2:throw c._result;default:throw Error(r(295));
 }case na:throw Error(r(343));}throw Error(r(130,null==c?c:typeof c,""));};b.renderDOM=function(a,b,f){var c=a.type.toLowerCase();if(!Ua.hasOwnProperty(c)){if(!Ta.test(c))throw Error(r(65,c));Ua[c]=!0;}var d=a.props;if("input"===c)d=objectAssign({type:void 0},d,{defaultChecked:void 0,defaultValue:void 0,value:null!=d.value?d.value:d.defaultValue,checked:null!=d.checked?d.checked:d.defaultChecked});else if("textarea"===c){var g=d.value;if(null==g){g=d.defaultValue;var e=d.children;if(null!=e){if(null!=
 g)throw Error(r(92));if(Array.isArray(e)){if(!(1>=e.length))throw Error(r(93));e=e[0];}g=""+e;}null==g&&(g="");}d=objectAssign({},d,{value:void 0,children:""+g});}else if("select"===c)this.currentSelectValue=null!=d.value?d.value:d.defaultValue,d=objectAssign({},d,{value:void 0});else if("option"===c){e=this.currentSelectValue;var I=Wa(d.children);if(null!=e){var G=null!=d.value?d.value+"":I;g=!1;if(Array.isArray(e))for(var n=0;n<e.length;n++){if(""+e[n]===G){g=!0;break}}else g=""+e===G;d=objectAssign({selected:void 0,children:void 0},
 d,{selected:g,children:I});}}if(g=d){if(Na[c]&&(null!=g.children||null!=g.dangerouslySetInnerHTML))throw Error(r(137,c,""));if(null!=g.dangerouslySetInnerHTML){if(null!=g.children)throw Error(r(60));if(!("object"===typeof g.dangerouslySetInnerHTML&&"__html"in g.dangerouslySetInnerHTML))throw Error(r(61));}if(null!=g.style&&"object"!==typeof g.style)throw Error(r(62,""));}g=d;e=this.makeStaticMarkup;I=1===this.stack.length;G="<"+a.type;for(z in g)if(Xa.call(g,z)){var l=g[z];if(null!=l){if("style"===
 z){n=void 0;var x="",t="";for(n in l)if(l.hasOwnProperty(n)){var y=0===n.indexOf("--"),q=l[n];if(null!=q){if(y)var A=n;else if(A=n,Va.hasOwnProperty(A))A=Va[A];else {var T=A.replace(Pa,"-$1").toLowerCase().replace(Qa,"-ms-");A=Va[A]=T;}x+=t+A+":";t=n;y=null==q||"boolean"===typeof q||""===q?"":y||"number"!==typeof q||0===q||Y.hasOwnProperty(t)&&Y[t]?(""+q).trim():q+"px";x+=y;t=";";}}l=x||null;}n=null;b:if(y=c,q=g,-1===y.indexOf("-"))y="string"===typeof q.is;else switch(y){case "annotation-xml":case "color-profile":case "font-face":case "font-face-src":case "font-face-uri":case "font-face-format":case "font-face-name":case "missing-glyph":y=
 !1;break b;default:y=!0;}y?Ya.hasOwnProperty(z)||(n=z,n=va(n)&&null!=l?n+'="'+(N(l)+'"'):""):n=za(z,l);n&&(G+=" "+n);}}e||I&&(G+=' data-reactroot=""');var z=G;g="";Ma.hasOwnProperty(c)?z+="/>":(z+=">",g="</"+a.type+">");a:{e=d.dangerouslySetInnerHTML;if(null!=e){if(null!=e.__html){e=e.__html;break a}}else if(e=d.children,"string"===typeof e||"number"===typeof e){e=N(e);break a}e=null;}null!=e?(d=[],Sa.hasOwnProperty(c)&&"\n"===e.charAt(0)&&(z+="\n"),z+=e):d=Z(d.children);a=a.type;f=null==f||"http://www.w3.org/1999/xhtml"===
 f?La(a):"http://www.w3.org/2000/svg"===f&&"foreignObject"===a?"http://www.w3.org/1999/xhtml":f;this.stack.push({domNamespace:f,type:c,children:d,childIndex:0,context:b,footer:g});this.previousWasTextNode=!1;return z};return a}();function bb(a,b){a.prototype=Object.create(b.prototype);a.prototype.constructor=a;a.__proto__=b;}
-var cb=function(a){function b(b,c){var d=a.call(this,{})||this;d.partialRenderer=new ab(b,c);return d}bb(b,a);var c=b.prototype;c._destroy=function(a,b){this.partialRenderer.destroy();b(a);};c._read=function(a){try{this.push(this.partialRenderer.read(a));}catch(f){this.destroy(f);}};return b}(stream__default['default'].Readable),db={renderToString:function(a){a=new ab(a,!1);try{return a.read(Infinity)}finally{a.destroy();}},renderToStaticMarkup:function(a){a=new ab(a,!0);try{return a.read(Infinity)}finally{a.destroy();}},renderToNodeStream:function(a){return new cb(a,
+var cb=function(a){function b(b,c){var d=a.call(this,{})||this;d.partialRenderer=new ab(b,c);return d}bb(b,a);var c=b.prototype;c._destroy=function(a,b){this.partialRenderer.destroy();b(a);};c._read=function(a){try{this.push(this.partialRenderer.read(a));}catch(f){this.destroy(f);}};return b}(stream__default["default"].Readable),db={renderToString:function(a){a=new ab(a,!1);try{return a.read(Infinity)}finally{a.destroy();}},renderToStaticMarkup:function(a){a=new ab(a,!0);try{return a.read(Infinity)}finally{a.destroy();}},renderToNodeStream:function(a){return new cb(a,
 !1)},renderToStaticNodeStream:function(a){return new cb(a,!0)},version:"16.14.0"};var reactDomServer_node_production_min=db.default||db;
 
 /**
@@ -156,12 +156,18 @@ var ReactPropTypesSecret$1 = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 var ReactPropTypesSecret_1 = ReactPropTypesSecret$1;
 
+var has$1 = Function.call.bind(Object.prototype.hasOwnProperty);
+
+var require$$0 = ReactPropTypesSecret_1;
+
+var require$$1 = has$1;
+
 var printWarning = function() {};
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactPropTypesSecret = ReactPropTypesSecret_1;
+  var ReactPropTypesSecret = require$$0;
   var loggedTypeFailures = {};
-  var has = Function.call.bind(Object.prototype.hasOwnProperty);
+  var has = require$$1;
 
   printWarning = function(text) {
     var message = 'Warning: ' + text;
@@ -173,7 +179,7 @@ if (process.env.NODE_ENV !== 'production') {
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
-    } catch (x) {}
+    } catch (x) { /**/ }
   };
 }
 
@@ -202,7 +208,8 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
           if (typeof typeSpecs[typeSpecName] !== 'function') {
             var err = Error(
               (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
-              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
+              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.' +
+              'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.'
             );
             err.name = 'Invariant Violation';
             throw err;
@@ -250,6 +257,8 @@ checkPropTypes.resetWarningCache = function() {
 
 var checkPropTypes_1 = checkPropTypes;
 
+var require$$2 = checkPropTypes_1;
+
 var reactDomServer_node_development = register.createCommonjsModule(function (module) {
 
 
@@ -257,10 +266,10 @@ var reactDomServer_node_development = register.createCommonjsModule(function (mo
 if (process.env.NODE_ENV !== "production") {
   (function() {
 
-var React = React__default['default'];
+var React = React__default["default"];
 var _assign = objectAssign;
-var checkPropTypes = checkPropTypes_1;
-var stream = stream__default['default'];
+var checkPropTypes = require$$2;
+var stream = stream__default["default"];
 
 var ReactVersion = '16.14.0';
 
@@ -4328,6 +4337,8 @@ if (process.env.NODE_ENV === 'production') {
 
 var server = server_node;
 
+var ReactDOMServer = server;
+
 var convertAttrToString = function convertAttrToString(attr) {
   var results = [];
 
@@ -4368,6 +4379,6 @@ var getHeadHtml = function getHeadHtml(heads) {
   return results.join('');
 };
 
+exports.ReactDOMServer = ReactDOMServer;
 exports.convertAttrToString = convertAttrToString;
 exports.getHeadHtml = getHeadHtml;
-exports.server = server;

@@ -5,6 +5,8 @@ import readdir from 'recursive-readdir';
 
 const cwd: string = process.cwd();
 
+const debug = require('debug')('REACT-SSR:src/helpers')
+
 export const existsSync = (f: string): boolean => {
   try {
     fs.accessSync(f, fs.constants.F_OK);
@@ -29,6 +31,11 @@ export interface Config {
   staticViews: string[];
   usePreCompiled: Boolean;
   webpack?: (defaultConfig: webpack.Configuration, env: 'development' | 'production') => webpack.Configuration;
+  beta: boolean;
+  betaOpts: {
+    viewsRegex: RegExp;
+    preCompilePromisePool: number;
+  }
 }
 
 const getSsrConfig = (): Config => {
@@ -38,6 +45,11 @@ const getSsrConfig = (): Config => {
     viewsDir: 'views',
     usePreCompiled: false,
     staticViews: [],
+    beta: false,
+    betaOpts: {
+      preCompilePromisePool: 30,
+      viewsRegex: new RegExp('.*'),
+    },
   };
   const ssrConfigPath = path.join(cwd, 'ssr.config.js');
   if (existsSync(ssrConfigPath)) {
@@ -61,9 +73,19 @@ export const getPages = async (): Promise<string[]> => {
       continue;
     }
     if (possible.endsWith('.jsx') || possible.endsWith('.tsx')) {
-      pages.push(possible);
+      if (!isProd() && ssrConfig.beta) {
+        if (ssrConfig.betaOpts.viewsRegex.test(possible)) {
+          debug(`BETA: Adding page: ${possible}. Matching: ${ssrConfig.betaOpts.viewsRegex.toString()}`)
+          pages.push(possible);
+        }
+      } else {
+        debug(`Adding page: ${possible}`)
+        pages.push(possible);
+      }
     }
   }
+
+  debug(`Found ${pages.length} pages ${ssrConfig.beta ? `matching ${ssrConfig.betaOpts.viewsRegex.toString()}` : ''}.`)
   return pages;
 };
 

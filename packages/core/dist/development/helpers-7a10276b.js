@@ -1,6 +1,6 @@
 'use strict';
 
-var register = require('./register-394922e2.js');
+var register = require('./register-d5338d0c.js');
 var path = require('path');
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
@@ -20,27 +20,19 @@ var TerserPlugin__default = /*#__PURE__*/_interopDefaultLegacy(TerserPlugin);
 var fse__default = /*#__PURE__*/_interopDefaultLegacy(fse);
 var slash__default = /*#__PURE__*/_interopDefaultLegacy(slash);
 
-var getIterator$1 = function (it) {
-  var iteratorMethod = register.getIteratorMethod(it);
-  if (typeof iteratorMethod != 'function') {
-    throw TypeError(String(it) + ' is not iterable');
-  } return register.anObject(iteratorMethod.call(it));
-};
-
-var getIterator_1 = getIterator$1;
-
-var getIterator = getIterator_1;
-
 var iterableToArrayLimit = register.createCommonjsModule(function (module) {
 function _iterableToArrayLimit(arr, i) {
-  if (typeof register.symbol === "undefined" || !register.isIterable(Object(arr))) return;
+  var _i = arr == null ? null : typeof register.symbol !== "undefined" && register.getIteratorMethod(arr) || arr["@@iterator"];
+
+  if (_i == null) return;
   var _arr = [];
   var _n = true;
   var _d = false;
-  var _e = undefined;
+
+  var _s, _e;
 
   try {
-    for (var _i = getIterator(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
       _arr.push(_s.value);
 
       if (i && _arr.length === i) break;
@@ -59,8 +51,7 @@ function _iterableToArrayLimit(arr, i) {
   return _arr;
 }
 
-module.exports = _iterableToArrayLimit;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
 });
 
 var slicedToArray = register.createCommonjsModule(function (module) {
@@ -68,23 +59,22 @@ function _slicedToArray(arr, i) {
   return register.arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || register.unsupportedIterableToArray(arr, i) || register.nonIterableRest();
 }
 
-module.exports = _slicedToArray;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _slicedToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
 });
 
 var _slicedToArray = /*@__PURE__*/register.unwrapExports(slicedToArray);
 
-var promise$1 = register.promise;
+var promise = register.promise;
 
-var promise = promise$1;
+var _Promise = promise;
 
 var cwd$1 = process.cwd();
 
 var getBabelrc = function getBabelrc() {
-  if (register.existsSync(path__default['default'].join(cwd$1, '.babelrc'))) return path__default['default'].join(cwd$1, '.babelrc');
-  if (register.existsSync(path__default['default'].join(cwd$1, '.babelrc.js'))) return path__default['default'].join(cwd$1, '.babelrc.js');
-  if (register.existsSync(path__default['default'].join(cwd$1, 'babel.config.js'))) return path__default['default'].join(cwd$1, 'babel.config.js');
-  return path__default['default'].join(__dirname, '../../lib/babel.js');
+  if (register.existsSync(path__default["default"].join(cwd$1, '.babelrc'))) return path__default["default"].join(cwd$1, '.babelrc');
+  if (register.existsSync(path__default["default"].join(cwd$1, '.babelrc.js'))) return path__default["default"].join(cwd$1, '.babelrc.js');
+  if (register.existsSync(path__default["default"].join(cwd$1, 'babel.config.js'))) return path__default["default"].join(cwd$1, 'babel.config.js');
+  return path__default["default"].join(__dirname, '../../lib/babel.js');
 };
 
 var prodConfig = {
@@ -109,9 +99,9 @@ var prodConfig = {
       maxInitialRequests: 3
     },
     minimize: true,
-    minimizer: [new OptimizeCSSAssetsPlugin__default['default'](), new TerserPlugin__default['default']()]
+    minimizer: [new OptimizeCSSAssetsPlugin__default["default"](), new TerserPlugin__default["default"]()]
   },
-  plugins: [new webpack__default['default'].DefinePlugin({
+  plugins: [new webpack__default["default"].DefinePlugin({
     'process.env.NODE_ENV': register.stringify('production')
   })]
 };
@@ -121,7 +111,7 @@ var configureWebpack = function configureWebpack(entry) {
     devtool: register.isProd() ? false : 'eval-source-map',
     entry: entry,
     output: {
-      path: path__default['default'].join(cwd$1, register.ssrConfig.distDir),
+      path: path__default["default"].join(cwd$1, register.ssrConfig.distDir),
       filename: '[name].js'
     },
     resolve: {
@@ -141,9 +131,9 @@ var configureWebpack = function configureWebpack(entry) {
       }, {
         test: /\.css$/i,
         use: [{
-          loader: MiniCssExtractPlugin__default['default'].loader,
+          loader: MiniCssExtractPlugin__default["default"].loader,
           options: {
-            publicPath: path__default['default'].join(cwd$1, register.ssrConfig.distDir),
+            publicPath: path__default["default"].join(cwd$1, register.ssrConfig.distDir),
             hmr: !register.isProd(),
             reloadAll: true
           }
@@ -153,9 +143,9 @@ var configureWebpack = function configureWebpack(entry) {
       }, {
         test: /\.scss$/i,
         use: [{
-          loader: MiniCssExtractPlugin__default['default'].loader,
+          loader: MiniCssExtractPlugin__default["default"].loader,
           options: {
-            publicPath: path__default['default'].join(cwd$1, register.ssrConfig.distDir),
+            publicPath: path__default["default"].join(cwd$1, register.ssrConfig.distDir),
             hmr: !register.isProd(),
             reloadAll: true
           }
@@ -169,7 +159,7 @@ var configureWebpack = function configureWebpack(entry) {
         }]
       }]
     },
-    plugins: [new MiniCssExtractPlugin__default['default']({
+    plugins: [new MiniCssExtractPlugin__default["default"]({
       filename: '[name].css',
       chunkFilename: '[id].css',
       ignoreOrder: true
@@ -207,28 +197,28 @@ var getEntry = /*#__PURE__*/function () {
 
           case 3:
             entryPages = _context4.sent;
-            entryPath = path__default['default'].resolve(__dirname, "../../lib/webpack/".concat(register.ssrConfig.id, ".js"));
-            template = fse__default['default'].readFileSync(entryPath).toString();
-            appPath = path__default['default'].join(__dirname, 'app.js');
+            entryPath = path__default["default"].resolve(__dirname, "../../lib/webpack/".concat(register.ssrConfig.id, ".js"));
+            template = fse__default["default"].readFileSync(entryPath).toString();
+            appPath = path__default["default"].join(__dirname, 'app.js');
 
-            if (fse__default['default'].existsSync(path__default['default'].join(cwd, register.ssrConfig.viewsDir, "_app".concat(ext)))) {
-              appPath = path__default['default'].join(cwd, register.ssrConfig.viewsDir, "_app".concat(ext));
+            if (fse__default["default"].existsSync(path__default["default"].join(cwd, register.ssrConfig.viewsDir, "_app".concat(ext)))) {
+              appPath = path__default["default"].join(cwd, register.ssrConfig.viewsDir, "_app".concat(ext));
             }
 
-            memfs.mkdirpSync(path__default['default'].join(cwd, 'react-ssr-src'));
+            memfs.mkdirpSync(path__default["default"].join(cwd, 'react-ssr-src'));
 
             for (i = 0; i < entryPages.length; i++) {
               page = entryPages[i];
               pageId = register.getPageId(page, '/');
-              dir = path__default['default'].dirname(pageId);
-              name = path__default['default'].basename(pageId);
+              dir = path__default["default"].dirname(pageId);
+              name = path__default["default"].basename(pageId);
 
               if (dir !== '.') {
-                memfs.mkdirpSync(path__default['default'].join(cwd, 'react-ssr-src', dir));
+                memfs.mkdirpSync(path__default["default"].join(cwd, 'react-ssr-src', dir));
               }
 
-              memfs.writeFileSync(path__default['default'].join(cwd, 'react-ssr-src', dir, register.concat(_context = "entry-".concat(name)).call(_context, ext)), template.replace('__REACT_SSR_APP__', slash__default['default'](appPath)).replace('__REACT_SSR_PAGE__', slash__default['default'](page)));
-              entry[register.getPageId(page, '_')] = register.concat(_context2 = register.concat(_context3 = "./react-ssr-src/".concat(slash__default['default'](dir), "/entry-")).call(_context3, name)).call(_context2, ext);
+              memfs.writeFileSync(path__default["default"].join(cwd, 'react-ssr-src', dir, register.concat(_context = "entry-".concat(name)).call(_context, ext)), template.replace('__REACT_SSR_APP__', slash__default["default"](appPath)).replace('__REACT_SSR_PAGE__', slash__default["default"](page)));
+              entry[register.getPageId(page, '_')] = register.concat(_context2 = register.concat(_context3 = "./react-ssr-src/".concat(slash__default["default"](dir), "/entry-")).call(_context3, name)).call(_context2, ext);
             }
 
             return _context4.abrupt("return", [entry, entryPages]);
@@ -246,7 +236,7 @@ var getEntry = /*#__PURE__*/function () {
   };
 }();
 
+exports._Promise = _Promise;
 exports._slicedToArray = _slicedToArray;
 exports.configureWebpack = configureWebpack;
 exports.getEntry = getEntry;
-exports.promise = promise;

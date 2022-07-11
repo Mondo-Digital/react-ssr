@@ -1,7 +1,7 @@
 'use strict';
 
-var helpers = require('./helpers-89ed3c40.js');
-var register = require('./register-394922e2.js');
+var helpers = require('./helpers-7a10276b.js');
+var register = require('./register-d5338d0c.js');
 var fs = require('fs');
 var fse = require('fs-extra');
 var MemoryFileSystem = require('memory-fs');
@@ -29,24 +29,24 @@ var cwd = process.cwd();
 
 var ufs = require('unionfs').ufs;
 
-var memfs = new MemoryFileSystem__default['default']();
-ufs.use(fs__default['default']).use(memfs);
+var memfs = new MemoryFileSystem__default["default"]();
+ufs.use(fs__default["default"]).use(memfs);
 
 var _registerExpressRoutes = function _registerExpressRoutes(app, entryPages) {
   var _loop = function _loop(i) {
     var page = entryPages[i];
     var pageId = register.getPageId(page, '_');
     app.use("/_react-ssr/".concat(pageId, ".css"), function (req, res) {
-      var filename = path__default['default'].join(cwd, register.ssrConfig.distDir, "".concat(pageId, ".css"));
-      var style = register.existsSync(filename) ? fs__default['default'].readFileSync(filename).toString() : '';
+      var filename = path__default["default"].join(cwd, register.ssrConfig.distDir, "".concat(pageId, ".css"));
+      var style = register.existsSync(filename) ? fs__default["default"].readFileSync(filename).toString() : '';
       res.writeHead(200, {
         'Content-Type': 'text/css'
       });
       res.end(style, 'utf-8');
     });
     app.use("/_react-ssr/".concat(pageId, ".js"), function (req, res) {
-      var filename = path__default['default'].join(cwd, register.ssrConfig.distDir, "".concat(pageId, ".js"));
-      var script = fs__default['default'].readFileSync(filename).toString();
+      var filename = path__default["default"].join(cwd, register.ssrConfig.distDir, "".concat(pageId, ".js"));
+      var script = fs__default["default"].readFileSync(filename).toString();
       res.status(200).type('.js').send(script);
     });
   };
@@ -73,7 +73,7 @@ var production = /*#__PURE__*/(function () {
             entry = _yield$getEntry2[0];
             entryPages = _yield$getEntry2[1];
 
-            if (!(register.ssrConfig.usePreCompiled && !register.existsSync(path__default['default'].join(cwd, register.ssrConfig.distDir)))) {
+            if (!(register.ssrConfig.usePreCompiled && !register.existsSync(path__default["default"].join(cwd, register.ssrConfig.distDir)))) {
               _context.next = 10;
               break;
             }
@@ -81,7 +81,7 @@ var production = /*#__PURE__*/(function () {
             throw new Error("Build dir not found and `usePreCompiled` is set to `true`.");
 
           case 10:
-            if (!(register.ssrConfig.usePreCompiled && register.existsSync(path__default['default'].join(cwd, register.ssrConfig.distDir)))) {
+            if (!(register.ssrConfig.usePreCompiled && register.existsSync(path__default["default"].join(cwd, register.ssrConfig.distDir)))) {
               _context.next = 14;
               break;
             }
@@ -97,12 +97,12 @@ var production = /*#__PURE__*/(function () {
               break;
             }
 
-            fse__default['default'].removeSync(path__default['default'].join(cwd, register.ssrConfig.distDir));
+            fse__default["default"].removeSync(path__default["default"].join(cwd, register.ssrConfig.distDir));
             webpackConfig = helpers.configureWebpack(entry);
-            compiler = webpack__default['default'](webpackConfig);
+            compiler = webpack__default["default"](webpackConfig);
             compiler.inputFileSystem = ufs;
             _context.next = 21;
-            return new helpers.promise(function (resolve, reject) {
+            return new helpers._Promise(function (resolve, reject) {
               compiler.run(function (err, stats) {
                 err && reject(err.stack || err);
                 stats.hasErrors() && reject(stats.toString());
@@ -126,4 +126,4 @@ var production = /*#__PURE__*/(function () {
   };
 })();
 
-exports.default = production;
+exports["default"] = production;
